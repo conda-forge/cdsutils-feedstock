@@ -1,5 +1,5 @@
 {% set name = "cdsutils" %}
-{% set version = "1.4.1" %}
+{% set version = "1.4.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://git.ligo.org/cds/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3282804a3f6e40bcabcb8d3057f75c131a051a5fcaceba4d8eb2b533f28254c7
+  sha256: 052fa31daaf0ed78a25b9ba183e83ccfc553326439a701a52f0b0122ccdb687a
 
 build:
   number: 0
