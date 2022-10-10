@@ -1,13 +1,13 @@
 {% set name = "cdsutils" %}
-{% set version = "1.4.2" %}
+{% set version = "1.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://git.ligo.org/cds/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 052fa31daaf0ed78a25b9ba183e83ccfc553326439a701a52f0b0122ccdb687a
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 242ccd7ae5c29258d6ae374ec8950f77ee95a21fa42e420a6161c8d7a63a671a
 
 build:
   number: 0
@@ -20,22 +20,32 @@ requirements:
   host:
     - pip
     - python
+    - setuptools
+    - setuptools-scm
   run:
     - ezca
     - gpstime
+    - matplotlib
     - numpy
     - python
     - python-nds2-client
 
 test:
+  requires:
+    - pip
   imports:
     - cdsutils
   commands:
-    - cdsutils --help
+    # check metadata
+    - python -m pip check cdsutils
+    - python -m pip show cdsutils
+    # run test suite
     - python -m cdsutils.tests
+    # sanity-check entry points
+    - cdsutils --help
 
 about:
-  home: https://git.ligo.org/cds/cdsutils/
+  home: https://git.ligo.org/cds/software/cdsutils/
   dev_url: https://git.ligo.org/cds/cdsutils/
   license: GPL-3.0-or-later
   license_family: GPL
