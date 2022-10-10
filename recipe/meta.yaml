@@ -37,7 +37,6 @@ test:
     - cdsutils
   commands:
     # check metadata
-    - python -m pip check cdsutils
     - python -m pip show cdsutils
     # run test suite
     - python -m cdsutils.tests
