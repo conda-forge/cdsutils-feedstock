@@ -10,7 +10,7 @@ source:
   sha256: 242ccd7ae5c29258d6ae374ec8950f77ee95a21fa42e420a6161c8d7a63a671a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -33,14 +33,13 @@ requirements:
 test:
   requires:
     - pip
+    - pytest
+    - pytest-console-scripts
   imports:
     - cdsutils
   commands:
-    # check metadata
-    - python -m pip show cdsutils
-    # run test suite
-    - python -m cdsutils.tests
-    # sanity-check entry points
+    - pip check
+    - python -m pytest --pyargs cdsutils
     - cdsutils --help
 
 about:
