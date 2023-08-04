@@ -1,11 +1,11 @@
-About cdsutils
-==============
+About cdsutils-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cdsutils-feedstock/blob/main/LICENSE.txt)
 
 Home: https://git.ligo.org/cds/software/cdsutils/
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cdsutils-feedstock/blob/main/LICENSE.txt)
 
 Summary: Advanced LIGO CDS python utilities
 
