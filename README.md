@@ -9,7 +9,7 @@ Package license: GPL-3.0-or-later
 
 Summary: Advanced LIGO CDS python utilities
 
-Development: https://git.ligo.org/cds/cdsutils/
+Development: https://git.ligo.org/cds/software/cdsutils/
 
 Various python libraries and command line utilities for interacting
 with the Advanced LIGO control system.
@@ -150,5 +150,6 @@ Feedstock Maintainers
 =====================
 
 * [@duncanmmacleod](https://github.com/duncanmmacleod/)
+* [@evonreis](https://github.com/evonreis/)
 * [@jrollins](https://github.com/jrollins/)
 

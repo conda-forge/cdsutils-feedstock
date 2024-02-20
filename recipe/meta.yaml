@@ -1,5 +1,5 @@
 {% set name = "cdsutils" %}
-{% set version = "1.6.1" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d7506b08cf901dd8b7b8c9ba087e232001be43510522ef32a7770b55e7dc1a8e
+  sha256: 8756de7a74d7085875b6d2cbdfe4d7c220aaee8841158b08e1a166ed9fd63ead
 
 build:
   number: 0
