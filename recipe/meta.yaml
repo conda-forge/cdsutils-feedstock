@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 8756de7a74d7085875b6d2cbdfe4d7c220aaee8841158b08e1a166ed9fd63ead
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python {{ python_min }}
     - setuptools
     - setuptools-scm
   run:
@@ -27,7 +27,7 @@ requirements:
     - gpstime
     - matplotlib-base
     - numpy
-    - python >=3.5
+    - python >={{ python_min }}
     - python-nds2-client
 
 test:
@@ -35,6 +35,7 @@ test:
     - pip
     - pytest
     - pytest-console-scripts
+    - python {{ python_min }}
   imports:
     - cdsutils
   commands:
